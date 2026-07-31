@@ -165,6 +165,14 @@
   white-space: nowrap;
 }
 
+/* --- 引用块竖线：莫兰迪粉紫（阅前提示用） --- */
+.md-content blockquote {
+  border-inline-start: 0.3rem solid var(--morandi-tag-text);
+}
+[data-theme="dark"] .md-content blockquote {
+  border-inline-start: 0.3rem solid #c49aa1;
+}
+
 /* --- 标签归档页 /tags/（粉紫系） --- */
 .terms a[href*="/tags/"] {
   display: inline-block;
