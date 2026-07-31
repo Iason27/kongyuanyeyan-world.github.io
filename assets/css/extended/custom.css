@@ -67,6 +67,29 @@
   color: #fff !important;
 }
 
+/* --- tags 与 categories 同一行（文章页底部） --- */
+.post-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.post-footer .post-cats {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+.post-footer .post-tags {
+  display: inline-flex;
+  margin: 0;
+}
+.post-footer .paginav {
+  flex-basis: 100%;
+  margin-top: 8px;
+}
+
 /* --- 列表页条目：meta 行内的 tags/cats（莫兰迪下划线） --- */
 /* 列表页显示，文章页隐藏（文章页已有 pill 样式） */
 .post-single .meta-tags,

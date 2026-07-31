@@ -42,9 +42,9 @@
   </div>
   {{- end }}
 
-  {{- partial "extend_post_content.html" . }}
-
   <footer class="post-footer">
+    {{- partial "extend_post_content.html" . }}
+
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
