@@ -1,0 +1,4 @@
+# 忽略 hugo 构建产物
+public/
+.hugo_build.lock
+.DS_Store
