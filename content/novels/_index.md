@@ -1,6 +1,6 @@
 ---
 title: "长篇"
-description: "长篇连载作品"
+description: "长篇连载，慎跳坑，多数未完结"
 robotsNoIndex: true
 ---
 
