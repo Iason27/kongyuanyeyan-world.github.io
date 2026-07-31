@@ -27,29 +27,40 @@
         if (t === "light") return "light";
         return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       }
-      function applyGiscusTheme() {
+      let lastSent = null;
+      function applyGiscusTheme(force) {
         const iframe = document.querySelector("iframe.giscus-frame");
-        if (!iframe) return;
+        if (!iframe) return false;
+        const theme = THEMES[currentTheme()];
+        if (!force && theme === lastSent) return true; // 主题没变就不重复发
         iframe.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: THEMES[currentTheme()] } } },
+          { giscus: { setConfig: { theme: theme } } },
           "https://giscus.app"
         );
+        lastSent = theme;
+        return true;
       }
-      document.addEventListener("giscus:loaded", applyGiscusTheme);
-      // 监听站点主题切换（html[data-theme] 变化，覆盖 light/dark/auto）
+      // giscus 加载完成事件
+      document.addEventListener("giscus:loaded", function () { applyGiscusTheme(true); });
+      // iframe 自身 load 事件
+      const iframeEl = document.querySelector("iframe.giscus-frame");
+      if (iframeEl) iframeEl.addEventListener("load", function () { applyGiscusTheme(true); });
+      // 监听站点主题切换（html[data-theme] 变化）
       const observer = new MutationObserver(function () { applyGiscusTheme(); });
       observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
       // auto 模式下跟随系统切换
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyGiscusTheme);
-      // 兜底：轮询等待 giscus iframe 出现（事件可能早于脚本注册）
-      let tries = 0;
+      try {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { applyGiscusTheme(true); });
+      } catch (e) {}
+      // 兜底：持续轮询（每 1.5s，最长 5 分钟），直到发送成功过
+      let sent = false;
+      let ticks = 0;
       const timer = setInterval(function () {
-        if (document.querySelector("iframe.giscus-frame")) {
-          applyGiscusTheme();
-          tries++;
-          if (tries > 20) clearInterval(timer);
-        }
-      }, 1000);
+        if (sent && ticks > 60) { clearInterval(timer); return; }
+        if (applyGiscusTheme()) sent = true;
+        ticks++;
+        if (ticks > 200) clearInterval(timer);
+      }, 1500);
     })();
   </script>
 </div>
