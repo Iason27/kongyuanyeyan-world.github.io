@@ -2,7 +2,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://kongyuanyeyan-world.github.io/"
+baseURL = "https://iason27.github.io/kongyuanyeyan-world.github.io/"
 defaultContentLanguage = "zh-cn"
 
 enableRobotsTXT = true
