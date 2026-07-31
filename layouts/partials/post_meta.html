@@ -18,10 +18,23 @@
     {{- end }}
 {{- end }}
 
-{{/* CP 名：front matter 里写 cp: "葛织" 即可显示 */}}
-{{- with .Params.cp -}}
-    {{- $scratch.Add "meta" (slice (printf "<span class=\"post-cp\">CP: %s</span>" .)) }}
-{{- end }}
+{{/* tags 链接（莫兰迪粉紫下划线，列表页显示） */}}
+{{- with (.GetTerms "tags") -}}
+    {{- $links := slice -}}
+    {{- range . -}}
+        {{- $links = $links | append (printf "<a class=\"meta-tag\" href=\"%s\">%s</a>" .RelPermalink .LinkTitle) -}}
+    {{- end -}}
+    {{- $scratch.Add "meta" (slice (printf "<span class=\"meta-tags\">%s</span>" (delimit $links " "))) -}}
+{{- end -}}
+
+{{/* categories 链接（莫兰迪灰蓝下划线，列表页显示） */}}
+{{- with (.GetTerms "categories") -}}
+    {{- $links := slice -}}
+    {{- range . -}}
+        {{- $links = $links | append (printf "<a class=\"meta-cat\" href=\"%s\">%s</a>" .RelPermalink .LinkTitle) -}}
+    {{- end -}}
+    {{- $scratch.Add "meta" (slice (printf "<span class=\"meta-cats\">%s</span>" (delimit $links " "))) -}}
+{{- end -}}
 
 {{- with ($scratch.Get "meta") }}
     {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}

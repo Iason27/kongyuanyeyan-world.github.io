@@ -67,6 +67,46 @@
   color: #fff !important;
 }
 
+/* --- 列表页条目：meta 行内的 tags/cats（莫兰迪下划线） --- */
+/* 列表页显示，文章页隐藏（文章页已有 pill 样式） */
+.post-single .meta-tags,
+.post-single .meta-cats {
+  display: none;
+}
+.post-entry .meta-tags,
+.post-entry .meta-cats {
+  display: inline;
+  white-space: normal;
+}
+.post-entry .meta-tag {
+  color: var(--morandi-tag-text) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--morandi-tag-border);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  margin: 0 2px;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+}
+.post-entry .meta-tag:hover {
+  color: var(--morandi-tag-text) !important;
+  text-decoration-color: var(--morandi-tag-text);
+}
+.post-entry .meta-cat {
+  color: var(--morandi-cat-text) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--morandi-cat-border);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  margin: 0 2px;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+}
+.post-entry .meta-cat:hover {
+  color: var(--morandi-cat-text) !important;
+  text-decoration-color: var(--morandi-cat-text);
+}
+
 /* --- 标签归档页 /tags/（粉紫系） --- */
 .terms a[href*="/tags/"] {
   display: inline-block;
