@@ -1,7 +1,7 @@
 ---
 title: "蛇果"
 robotsNoIndex: true
-description: "葛力姆乔 x 井上织姬"
+cp: "葛力姆乔 x 井上织姬"
 hideSummary: true
 paginate: 99
 tags:
