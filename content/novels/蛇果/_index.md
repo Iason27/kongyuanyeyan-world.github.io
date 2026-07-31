@@ -3,6 +3,7 @@ title: "蛇果"
 robotsNoIndex: true
 cp: "葛织"
 hideSummary: true
+paginate: 99
 tags:
   - bleach
   - 葛织
