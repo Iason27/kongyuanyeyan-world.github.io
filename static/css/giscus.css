@@ -1,0 +1,67 @@
+/* giscus 评论框主题：与站点 PaperMod 默认浅色 + 莫兰迪点缀统一 */
+main {
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f6f6;
+  --color-canvas-inset: #ffffff;
+
+  --color-fg-default: #1f1f1f;
+  --color-fg-muted: #6c6c6c;
+  --color-fg-subtle: #8a8a8a;
+  --color-fg-on-emphasis: #ffffff;
+
+  --color-border-default: #e6e6e6;
+  --color-border-muted: #eeeeee;
+  --color-neutral-muted: rgba(108, 108, 108, 0.15);
+
+  /* 莫兰迪粉紫（与 tags 同色系） */
+  --color-accent-fg: #9a6a72;
+  --color-accent-emphasis: #9a6a72;
+  --color-accent-muted: rgba(154, 106, 114, 0.35);
+  --color-accent-subtle: #f7ecee;
+
+  /* 按钮 */
+  --color-btn-bg: #ffffff;
+  --color-btn-border: #e0e0e0;
+  --color-btn-text: #1f1f1f;
+  --color-btn-hover-bg: #f6f6f6;
+  --color-btn-hover-border: #d5d5d5;
+  --color-btn-active-bg: #efefef;
+  --color-btn-selected-bg: #ececec;
+  --color-btn-primary-bg: #9a6a72;
+  --color-btn-primary-border: #9a6a72;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-hover-bg: #8a5a62;
+  --color-btn-primary-hover-border: #8a5a62;
+
+  /* 输入框 */
+  --color-input-bg: #ffffff;
+  --color-input-border: #dcdcdc;
+  --color-input-contrast-bg: #f6f6f6;
+
+  /* 成功/注意/危险（保持温和） */
+  --color-success-fg: #5a7687;
+  --color-success-emphasis: #5a7687;
+  --color-success-subtle: #e8eef1;
+  --color-attention-fg: #a08a5a;
+  --color-attention-emphasis: #a08a5a;
+  --color-attention-subtle: #f4efe6;
+  --color-danger-fg: #b05060;
+  --color-danger-emphasis: #b05060;
+  --color-danger-subtle: #f6eaec;
+
+  /* 代码引用 */
+  --color-prettylights-syntax-comment: #6c6c6c;
+  --color-prettylights-syntax-keyword: #9a6a72;
+  --color-prettylights-syntax-string: #5a7687;
+  --color-prettylights-syntax-constant: #8a6a9a;
+  --color-prettylights-syntax-entity: #6a7a9a;
+  --color-prettylights-syntax-markup-heading: #9a6a72;
+  --color-prettylights-syntax-markup-bold: #1f1f1f;
+  --color-prettylights-syntax-markup-italic: #1f1f1f;
+
+  /* 头像/阴影 */
+  --color-avatar-bg: #f0f0f0;
+  --color-primer-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, 0.04);
+  --color-primer-shadow-focus: 0 0 0 3px rgba(154, 106, 114, 0.3);
+  --color-focus-ring: rgba(154, 106, 114, 0.35);
+}
