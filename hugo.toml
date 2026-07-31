@@ -11,7 +11,7 @@ enableRobotsTXT = true
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  mainSections = ["novels"]
+  mainSections = []
   customHeadHTML = '<meta name="robots" content="noindex">'
 
 [[menu.main]]
