@@ -1,4 +1,5 @@
----robotsNoIndex: true
+---
+robotsNoIndex: true
 
 title: "这里廿七" 
 description: "鬼畜咸鱼文手，不入流小卡拉米画手（虽然画得少），日常鬼畜选手，无肉不欢，常有意外梦幻联动，日常冷圈晃荡"
