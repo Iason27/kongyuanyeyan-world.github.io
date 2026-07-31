@@ -5,4 +5,4 @@ robotsNoIndex: true
 
 ## 📚 作品
 
-- [**《蛇果》**](novels/蛇果/) — Bleach（死神）｜葛力姆乔 × 井上织姬｜未完结
+- [**《蛇果》**](novels/蛇果/) — bleach｜葛织｜18X｜未完结
