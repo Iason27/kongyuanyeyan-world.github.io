@@ -1,4 +1,5 @@
----
+---robotsNoIndex: true
+
 title: "示例CP"
 description: "这是一个示例分类文件夹，用来演示结构。删掉即可。"
 ---

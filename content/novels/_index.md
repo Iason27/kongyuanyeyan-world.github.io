@@ -1,4 +1,5 @@
----
+---robotsNoIndex: true
+
 title: "📚 小说仓库"
 description: "全部作品按 CP / 作品分类存放"
 ---

@@ -1,4 +1,5 @@
----
+---robotsNoIndex: true
+
 title: "关于"
 description: "关于这个站"
 ---
