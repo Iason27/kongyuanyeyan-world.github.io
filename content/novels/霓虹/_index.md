@@ -1,6 +1,7 @@
 ---
 title: "霓虹"
 robotsNoIndex: true
+status: "连载中"
 cp: "吉尔伽美什(C闪) x 阿尔托莉雅(X毛)"
 hideSummary: true
 paginate: 99

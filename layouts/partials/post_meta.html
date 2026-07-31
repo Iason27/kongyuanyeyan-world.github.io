@@ -4,6 +4,16 @@
     {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
+{{/* 状态徽章：front matter 里写 status: "连载中"/"完结"/"待填坑" */}}
+{{- with .Params.status -}}
+    {{- $statusClass := "unknown" -}}
+    {{- if eq . "连载中" }}{{ $statusClass = "ongoing" }}
+    {{- else if eq . "完结" }}{{ $statusClass = "finished" }}
+    {{- else if eq . "待填坑" }}{{ $statusClass = "hiatus" }}
+    {{- end -}}
+    {{- $scratch.Add "meta" (slice (printf "<span class=\"status-badge %s\">%s</span>" $statusClass .)) }}
+{{- end -}}
+
 {{- if (.Param "ShowReadingTime") -}}
     {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
 {{- end }}

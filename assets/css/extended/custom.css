@@ -90,6 +90,34 @@
   margin-top: 8px;
 }
 
+/* --- 状态徽章（莫兰迪色系） --- */
+.status-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-size: 0.78em;
+  line-height: 1.6;
+  font-weight: 500;
+}
+/* 连载中：莫兰迪琥珀 */
+.status-badge.ongoing {
+  background: #f3e6d2;
+  color: #9c7645;
+  border: 1px solid #e3cfae;
+}
+/* 完结：莫兰迪灰蓝 */
+.status-badge.finished {
+  background: var(--morandi-cat-bg);
+  color: var(--morandi-cat-text);
+  border: 1px solid var(--morandi-cat-border);
+}
+/* 待填坑：莫兰迪雾紫 */
+.status-badge.hiatus {
+  background: #e8e1ee;
+  color: #7d6b8f;
+  border: 1px solid #d5cade;
+}
+
 /* --- 列表页条目：meta 行内的 tags/cats（莫兰迪下划线） --- */
 /* 列表页显示，文章页隐藏（文章页已有 pill 样式） */
 .post-single .meta-tags,
