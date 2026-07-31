@@ -118,6 +118,75 @@
   border: 1px solid #d5cade;
 }
 
+/* ===== 暗色模式适配（莫兰迪深色系） ===== */
+[data-theme=dark] .status-badge.ongoing {
+  background: #3d3223;
+  color: #e3c9a0;
+  border: 1px solid #6b5738;
+}
+[data-theme=dark] .status-badge.finished {
+  background: #22313b;
+  color: #a9c6d6;
+  border: 1px solid #3d5567;
+}
+[data-theme=dark] .status-badge.hiatus {
+  background: #2f2a3a;
+  color: #c6b6da;
+  border: 1px solid #4d4260;
+}
+[data-theme=dark] .post-tags a {
+  background: #3a272e;
+  color: #dbb4bd !important;
+  border-color: #5c3a46;
+}
+[data-theme=dark] .post-tags a:hover {
+  background: #dbb4bd;
+  color: #2a1d22 !important;
+}
+[data-theme=dark] .post-cats a {
+  background: #22313b;
+  color: #a9c6d6 !important;
+  border-color: #3d5567;
+}
+[data-theme=dark] .post-cats a:hover {
+  background: #a9c6d6;
+  color: #16222b !important;
+}
+[data-theme=dark] .terms a[href*="/tags/"] {
+  background: #3a272e;
+  color: #dbb4bd !important;
+  border-color: #5c3a46;
+}
+[data-theme=dark] .terms a[href*="/tags/"]:hover {
+  background: #dbb4bd;
+  color: #2a1d22 !important;
+}
+[data-theme=dark] .terms a[href*="/categories/"] {
+  background: #22313b;
+  color: #a9c6d6 !important;
+  border-color: #3d5567;
+}
+[data-theme=dark] .terms a[href*="/categories/"]:hover {
+  background: #a9c6d6;
+  color: #16222b !important;
+}
+[data-theme=dark] .post-entry .meta-tag {
+  color: #dbb4bd !important;
+  text-decoration-color: #8a6470;
+}
+[data-theme=dark] .post-entry .meta-tag:hover {
+  color: #dbb4bd !important;
+  text-decoration-color: #dbb4bd;
+}
+[data-theme=dark] .post-entry .meta-cat {
+  color: #a9c6d6 !important;
+  text-decoration-color: #5a7a8e;
+}
+[data-theme=dark] .post-entry .meta-cat:hover {
+  color: #a9c6d6 !important;
+  text-decoration-color: #a9c6d6;
+}
+
 /* --- 列表页条目：meta 行内的 tags/cats（莫兰迪下划线） --- */
 /* 列表页显示，文章页隐藏（文章页已有 pill 样式） */
 .post-single .meta-tags,
