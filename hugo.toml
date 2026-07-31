@@ -13,6 +13,7 @@ enableGitInfo = true
   ShowShareButtons = false
   ShowPostNavLinks = true
   mainSections = []
+  comments = true
   customHeadHTML = '<meta name="robots" content="noindex">'
 
 [[menu.main]]
