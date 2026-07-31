@@ -1,0 +1,29 @@
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content md-content">
+  {{- partial "anchored_headings.html" .Content -}}
+</div>
+{{- end }}
+
+{{- $pages := .RegularPages.ByTitle }}
+{{- if gt (len $pages) 0 }}
+<ul class="compact-list">
+  {{- range $pages }}
+  <li class="compact-item">
+    <a class="compact-title" href="{{ .Permalink }}">{{ .Title }}</a>
+    <span class="compact-summary">{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</span>
+  </li>
+  {{- end }}
+</ul>
+{{- else }}
+<div class="post-content md-content"><p>暂无脑洞，敬请期待～</p></div>
+{{- end }}
+{{- end }}
