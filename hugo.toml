@@ -16,7 +16,7 @@ enableRobotsTXT = true
 
 [[menu.main]]
   identifier = "novels"
-  name = "📚 小说"
+  name = "📚 长篇"
   pageRef = "novels"
   weight = 1
 
