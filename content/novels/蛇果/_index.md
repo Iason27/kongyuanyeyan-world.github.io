@@ -1,11 +1,7 @@
 ---
 title: "蛇果"
 robotsNoIndex: true
-<<<<<<< Updated upstream
 cp: "葛力姆乔 x 井上织姬"
-=======
-CP: "葛力姆乔 x 井上织姬"
->>>>>>> Stashed changes
 hideSummary: true
 paginate: 99
 tags:
