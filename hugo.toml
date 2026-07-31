@@ -21,22 +21,34 @@ enableRobotsTXT = true
   weight = 1
 
 [[menu.main]]
+  identifier = "short"
+  name = "✍️ 短篇"
+  pageRef = "short"
+  weight = 2
+
+[[menu.main]]
+  identifier = "ideas"
+  name = "💡 脑洞记录"
+  pageRef = "ideas"
+  weight = 3
+
+[[menu.main]]
   identifier = "categories"
   name = "分类"
   pageRef = "categories"
-  weight = 2
+  weight = 4
 
 [[menu.main]]
   identifier = "tags"
   name = "标签"
   pageRef = "tags"
-  weight = 3
+  weight = 5
 
 [[menu.main]]
   identifier = "about"
   name = "关于"
   pageRef = "about"
-  weight = 4
+  weight = 6
 
 [taxonomies]
   tag = "tags"
