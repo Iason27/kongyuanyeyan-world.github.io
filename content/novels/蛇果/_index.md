@@ -1,13 +1,3 @@
----
-title: "蛇果"
-description: "Bleach（死神）同人 ｜ 葛力姆乔 × 井上织姬 ｜ 未完结"
-robotsNoIndex: true
-tags:
-  - Bleach
-  - 葛力姆乔×井上织姬
-  - 未完结
----
-
 # 蛇果
 
 > **作品来源：** Bleach（死神）  
