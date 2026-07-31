@@ -1,0 +1,19 @@
+{{ $sections := slice "novels" "short" "ideas" }}
+{{ $pages := where site.RegularPages "Section" "in" $sections }}
+{{ $sorted := $pages.ByLastmod.Reverse }}
+{{ $recent := first 8 $sorted }}
+{{ if eq (len $recent) 0 }}
+<p>还没有内容，去写第一篇吧！</p>
+{{ else }}
+<ul class="recent-updates">
+{{ range $recent }}
+  <li class="recent-item">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="recent-meta">
+      {{ with .Section }}{{ if eq . "novels" }}📚 长篇{{ else if eq . "short" }}✍️ 短篇{{ else if eq . "ideas" }}💡 脑洞{{ end }}{{ end }}
+      ｜ {{ .Lastmod.Format "2006-01-02" }}
+    </span>
+  </li>
+{{ end }}
+</ul>
+{{ end }}

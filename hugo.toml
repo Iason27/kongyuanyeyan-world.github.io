@@ -4,6 +4,7 @@ title = "我的同人文仓库"
 theme = "PaperMod"
 
 enableRobotsTXT = true
+enableGitInfo = true
 
 # 同人文隐私：禁止搜索引擎收录
 [params]
