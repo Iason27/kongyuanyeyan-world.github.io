@@ -10,7 +10,7 @@ categories:
   - 18X
 ---
 
-*BLEACH/ 葛织 / 18X*
+## *BLEACH/ 葛织 / 18X*
 
 ## 阅前提示
 
