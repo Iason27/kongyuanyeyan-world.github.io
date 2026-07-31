@@ -84,6 +84,10 @@
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
+  {{- else if .Param "cp" }}
+  <div class="entry-content">
+    <p>CP：{{ .Param "cp" }}</p>
+  </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
