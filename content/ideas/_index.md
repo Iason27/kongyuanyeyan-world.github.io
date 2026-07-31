@@ -1,6 +1,6 @@
 ---
 title: "脑洞记录"
-description: "即将写但还没写的脑洞，coming soon"
+description: "即将写但还没写的脑洞，尽力快点上线"
 robotsNoIndex: true
 ---
 
@@ -12,4 +12,6 @@ robotsNoIndex: true
 
 请对社畜二次元多一些关爱，鞠躬
 
-还有就是谢谢你一直关注本咸鱼文手！～
+欢迎多留言，多催更！
+
+说不定能抽到你点梗！
