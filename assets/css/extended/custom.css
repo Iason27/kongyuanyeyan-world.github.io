@@ -173,6 +173,71 @@
   border-inline-start: 0.3rem solid #c49aa1;
 }
 
+/* --- 长篇章节：返回目录链接 --- */
+.back-to-toc {
+  margin: 6px 0 18px;
+  font-size: 0.92em;
+}
+.back-to-toc a {
+  color: var(--morandi-tag-text);
+  text-decoration: none;
+  border: 1px dashed var(--morandi-tag-border);
+  border-radius: 999px;
+  padding: 3px 14px;
+  transition: all 0.2s ease;
+}
+.back-to-toc a:hover {
+  background: var(--morandi-tag-bg);
+  text-decoration: underline;
+}
+
+/* --- 长篇章节：上一章/下一章导航 --- */
+.chapter-nav {
+  justify-content: space-between;
+}
+.chapter-nav .toc {
+  text-align: center;
+  color: var(--morandi-tag-text);
+}
+
+/* --- 404 页面 --- */
+.notfound {
+  text-align: center;
+  padding: 80px 20px;
+}
+.notfound-art {
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+.notfound-title {
+  font-size: 3.2em;
+  color: var(--morandi-tag-text);
+  margin: 0 0 12px;
+  letter-spacing: 0.1em;
+}
+.notfound-text {
+  font-size: 1.15em;
+  color: var(--primary);
+  margin: 6px 0;
+}
+.notfound-sub {
+  color: var(--secondary);
+  margin: 4px 0 28px;
+}
+.notfound-home {
+  display: inline-block;
+  color: var(--morandi-tag-text);
+  text-decoration: none;
+  border: 1px solid var(--morandi-tag-border);
+  border-radius: 999px;
+  padding: 6px 22px;
+  transition: all 0.2s ease;
+}
+.notfound-home:hover {
+  background: var(--morandi-tag-bg);
+  text-decoration: underline;
+}
+
 /* --- 标签归档页 /tags/（粉紫系） --- */
 .terms a[href*="/tags/"] {
   display: inline-block;

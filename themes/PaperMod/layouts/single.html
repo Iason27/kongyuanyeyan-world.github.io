@@ -28,6 +28,11 @@
     </div>
     {{- end }}
   </header>
+  {{- if and (eq .Section "novels") (eq .Kind "page") (not .Params.isTocPage) }}
+  <div class="back-to-toc">
+    <a href="{{ .CurrentSection.Permalink }}">← 返回《{{ .CurrentSection.Title }}》目录</a>
+  </div>
+  {{- end }}
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}

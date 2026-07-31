@@ -6,6 +6,9 @@ theme = "PaperMod"
 enableRobotsTXT = true
 enableGitInfo = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 # 同人文隐私：禁止搜索引擎收录
 [params]
   defaultTheme = "auto"
@@ -47,10 +50,27 @@ enableGitInfo = true
   weight = 5
 
 [[menu.main]]
+  identifier = "search"
+  name = "🔍 搜索"
+  url = "search/"
+  weight = 6
+
+[[menu.main]]
+  identifier = "archives"
+  name = "🗂 归档"
+  url = "archives/"
+  weight = 7
+
+[[menu.main]]
   identifier = "about"
   name = "关于"
   pageRef = "about"
-  weight = 6
+  weight = 8
+
+[params.assets]
+  favicon = "/favicon.svg"
+  favicon16x16 = "/favicon.svg"
+  favicon32x32 = "/favicon.svg"
 
 [taxonomies]
   tag = "tags"
