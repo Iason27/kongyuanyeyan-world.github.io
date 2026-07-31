@@ -1,6 +1,12 @@
 ---robotsNoIndex: true
 
 title: "蛇果"
+tags:
+  - bleach
+  - 葛织
+categories:
+  - BG
+  - 18X
 ---
 
 *BLEACH/ 葛织 / 18X*
