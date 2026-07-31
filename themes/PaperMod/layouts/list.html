@@ -40,6 +40,11 @@
 
 {{- $pages := union .RegularPages .Sections }}
 
+{{- if and (eq .Type "novels") (not .IsHome) }}
+{{- /* 长篇：章节按 md 文件名排序 */}}
+{{- $pages = union (sort .RegularPages "File.Path") .Sections }}
+{{- end }}
+
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
