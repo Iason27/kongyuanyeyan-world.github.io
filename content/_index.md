@@ -1,5 +1,5 @@
 ---
-title: "我的同人文仓库"
+title: "粮仓"
 robotsNoIndex: true
 ---
 
