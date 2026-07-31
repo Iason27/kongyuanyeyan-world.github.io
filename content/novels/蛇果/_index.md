@@ -1,6 +1,7 @@
----robotsNoIndex: true
-
+---
 title: "蛇果"
+robotsNoIndex: true
+cp: "葛织"
 tags:
   - bleach
   - 葛织

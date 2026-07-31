@@ -1,0 +1,7 @@
+{{- if .Params.categories -}}
+<div class="post-cats">
+  {{- range (.GetTerms "categories") }}
+  <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+  {{- end }}
+</div>
+{{- end }}

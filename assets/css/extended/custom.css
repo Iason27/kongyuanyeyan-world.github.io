@@ -1,0 +1,106 @@
+/* ============================================================
+   莫兰迪高级色系：tags 粉紫系 ｜ categories 灰蓝系
+   ============================================================ */
+:root {
+  /* tags 莫兰迪粉紫 */
+  --morandi-tag-bg: #f0e0e3;
+  --morandi-tag-text: #9a6a72;
+  --morandi-tag-border: #e2c8cd;
+  /* categories 莫兰迪灰蓝 */
+  --morandi-cat-bg: #dde7ec;
+  --morandi-cat-text: #5a7687;
+  --morandi-cat-border: #c3d3dc;
+}
+
+/* --- 文章页底部 tags（粉紫系） --- */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.post-tags li {
+  list-style: none;
+  margin: 0;
+}
+.post-tags a {
+  display: inline-block;
+  background: var(--morandi-tag-bg);
+  color: var(--morandi-tag-text) !important;
+  border: 1px solid var(--morandi-tag-border);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 0.82em;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.post-tags a:hover {
+  background: var(--morandi-tag-text);
+  color: #fff !important;
+}
+
+/* --- 文章页正文后 categories（灰蓝系） --- */
+.post-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #d5d5d5;
+}
+.post-cats a {
+  display: inline-block;
+  background: var(--morandi-cat-bg);
+  color: var(--morandi-cat-text) !important;
+  border: 1px solid var(--morandi-cat-border);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 0.82em;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.post-cats a:hover {
+  background: var(--morandi-cat-text);
+  color: #fff !important;
+}
+
+/* --- 标签归档页 /tags/（粉紫系） --- */
+.terms a[href*="/tags/"] {
+  display: inline-block;
+  background: var(--morandi-tag-bg);
+  color: var(--morandi-tag-text) !important;
+  border: 1px solid var(--morandi-tag-border);
+  border-radius: 999px;
+  padding: 2px 12px;
+  margin: 3px 2px;
+  font-size: 0.85em;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.terms a[href*="/tags/"]:hover {
+  background: var(--morandi-tag-text);
+  color: #fff !important;
+}
+
+/* --- 分类归档页 /categories/（灰蓝系） --- */
+.terms a[href*="/categories/"] {
+  display: inline-block;
+  background: var(--morandi-cat-bg);
+  color: var(--morandi-cat-text) !important;
+  border: 1px solid var(--morandi-cat-border);
+  border-radius: 999px;
+  padding: 2px 12px;
+  margin: 3px 2px;
+  font-size: 0.85em;
+  line-height: 1.7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.terms a[href*="/categories/"]:hover {
+  background: var(--morandi-cat-text);
+  color: #fff !important;
+}
