@@ -1,7 +1,7 @@
 ---robotsNoIndex: true
 
-title: "示例CP"
-description: "这是一个示例分类文件夹，用来演示结构。删掉即可。"
+title: "蛇果"
+description: "葛力姆乔x井上织姬"
 ---
 
 ## 阅前提示
