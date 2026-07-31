@@ -1,0 +1,67 @@
+/* giscus 评论框深色主题：匹配 PaperMod dark（--theme: rgb(29,30,32)）+ 莫兰迪点缀 */
+main {
+  --color-canvas-default: #1d1e20;
+  --color-canvas-subtle: #2e2e33;
+  --color-canvas-inset: #1d1e20;
+
+  --color-fg-default: #c4c4c5;
+  --color-fg-muted: #9b9c9d;
+  --color-fg-subtle: #7a7a7c;
+  --color-fg-on-emphasis: #1d1e20;
+
+  --color-border-default: #3a3a3c;
+  --color-border-muted: #2b2b2d;
+  --color-neutral-muted: rgba(155, 156, 157, 0.18);
+
+  /* 莫兰迪粉紫（提亮版，暗底可读） */
+  --color-accent-fg: #c49aa1;
+  --color-accent-emphasis: #b58a90;
+  --color-accent-muted: rgba(181, 138, 144, 0.35);
+  --color-accent-subtle: #3a2e31;
+
+  /* 按钮 */
+  --color-btn-bg: #2e2e33;
+  --color-btn-border: #444448;
+  --color-btn-text: #c4c4c5;
+  --color-btn-hover-bg: #38383e;
+  --color-btn-hover-border: #505054;
+  --color-btn-active-bg: #404046;
+  --color-btn-selected-bg: #3a3a40;
+  --color-btn-primary-bg: #b58a90;
+  --color-btn-primary-border: #b58a90;
+  --color-btn-primary-text: #1d1e20;
+  --color-btn-primary-hover-bg: #c49aa1;
+  --color-btn-primary-hover-border: #c49aa1;
+
+  /* 输入框 */
+  --color-input-bg: #25262a;
+  --color-input-border: #444448;
+  --color-input-contrast-bg: #2e2e33;
+
+  /* 成功/注意/危险（灰蓝莫兰迪提亮） */
+  --color-success-fg: #8aa8b8;
+  --color-success-emphasis: #6f93a6;
+  --color-success-subtle: #26313a;
+  --color-attention-fg: #b8a07a;
+  --color-attention-emphasis: #a08a5a;
+  --color-attention-subtle: #36302a;
+  --color-danger-fg: #c98a96;
+  --color-danger-emphasis: #b06a78;
+  --color-danger-subtle: #3a2c30;
+
+  /* 代码引用 */
+  --color-prettylights-syntax-comment: #9b9c9d;
+  --color-prettylights-syntax-keyword: #c49aa1;
+  --color-prettylights-syntax-string: #8aa8b8;
+  --color-prettylights-syntax-constant: #b49ac4;
+  --color-prettylights-syntax-entity: #8a9ac4;
+  --color-prettylights-syntax-markup-heading: #c49aa1;
+  --color-prettylights-syntax-markup-bold: #e0e0e1;
+  --color-prettylights-syntax-markup-italic: #e0e0e1;
+
+  /* 头像/阴影 */
+  --color-avatar-bg: #3a3a40;
+  --color-primer-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-primer-shadow-focus: 0 0 0 3px rgba(181, 138, 144, 0.3);
+  --color-focus-ring: rgba(181, 138, 144, 0.35);
+}

@@ -10,10 +10,47 @@
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="bottom"
-          data-theme="{{ .Site.BaseURL }}css/giscus.css"
+          data-theme="{{ .Site.BaseURL }}css/giscus-light.css"
           data-lang="zh-CN"
           crossorigin="anonymous"
           async>
+  </script>
+  <script>
+    (function () {
+      const THEMES = {
+        light: "{{ .Site.BaseURL }}css/giscus-light.css",
+        dark: "{{ .Site.BaseURL }}css/giscus-dark.css"
+      };
+      function currentTheme() {
+        const t = document.documentElement.dataset.theme;
+        if (t === "dark") return "dark";
+        if (t === "light") return "light";
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      function applyGiscusTheme() {
+        const iframe = document.querySelector("iframe.giscus-frame");
+        if (!iframe) return;
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: THEMES[currentTheme()] } } },
+          "https://giscus.app"
+        );
+      }
+      document.addEventListener("giscus:loaded", applyGiscusTheme);
+      // 监听站点主题切换（html[data-theme] 变化，覆盖 light/dark/auto）
+      const observer = new MutationObserver(function () { applyGiscusTheme(); });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      // auto 模式下跟随系统切换
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyGiscusTheme);
+      // 兜底：轮询等待 giscus iframe 出现（事件可能早于脚本注册）
+      let tries = 0;
+      const timer = setInterval(function () {
+        if (document.querySelector("iframe.giscus-frame")) {
+          applyGiscusTheme();
+          tries++;
+          if (tries > 20) clearInterval(timer);
+        }
+      }, 1000);
+    })();
   </script>
 </div>
 {{- end -}}
