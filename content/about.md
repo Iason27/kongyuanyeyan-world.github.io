@@ -5,9 +5,9 @@ description: "鬼畜咸鱼文手，不入流小卡拉米画手（虽然画得少
 
 这个站只是我应对审核没招了做的私人记录小网站，欢迎常来看看！～
 
-写作：Markdown
-构建：Hugo + PaperMod
-部署：GitHub
+写作: Markdown
+构建: Hugo + PaperMod
+部署: GitHub
 
 ---
 
