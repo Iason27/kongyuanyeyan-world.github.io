@@ -1,9 +1,7 @@
 ---
 title: "短篇"
-description: "短篇作品"
+description: "包括但不限于脑洞、点文以及cp营销产物"
 robotsNoIndex: true
 ---
 
-## 短篇作品
-
-独立短篇直接放这里，一篇一个文件。
+❗️争议剧情可能有，注意阅前提示
