@@ -9,6 +9,7 @@
 {{- /* 更新记录：长篇章节 + 短篇 + 脑洞，按发布时间倒序的时间线 */ -}}
 {{- $pages := where site.RegularPages "Type" "in" (slice "novels" "short" "ideas") }}
 {{- $pages = where $pages "Params.hidden" "ne" true }}
+{{- $pages = where $pages "Date.Year" "gt" 1999 }}  {{/* 过滤无 date 的零值页面（0001），避免出现 0001 年组 */}}
 {{- $pages = sort $pages "Date" "desc" }}
 {{- $byYear := $pages.GroupByDate "2006" "desc" }}
 
