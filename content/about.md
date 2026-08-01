@@ -9,7 +9,7 @@ description: "这里廿七，鬼畜咸鱼文手，不入流小卡拉米画手，
 
 此博客只是为了更文使用，目前只有基础功能，如果各位有任何意见或发现任何bug，请联系我～
 
->Lofter:kongyuanyeyan
+>Lofter:kongyuanyeyan  
 >邮箱：fifteenmoon27@gmail.com
 
 - 写作：Markdown
