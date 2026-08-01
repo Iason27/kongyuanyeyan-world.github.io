@@ -1,8 +1,8 @@
 ---
 title: "Pieces of Memories"
 robotsNoIndex: true
-status: "连载中"
-cp: "塞夏"
+status: "已完结"
+cp: "塞巴斯蒂安 x 夏尔"
 hideSummary: true
 tags:
   - 黑执事

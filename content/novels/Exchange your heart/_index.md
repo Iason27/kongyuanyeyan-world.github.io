@@ -1,12 +1,13 @@
 ---
 title: "Exchange your heart"
 robotsNoIndex: true
-status: "连载中"
-cp: "葛织"
+status: "已完结"
+cp: "阿尔托莉雅(黑枪呆) x 吉尔伽美什(A闪)"
 hideSummary: true
 tags:
-  - bleach
-  - 葛织
+  - fate
+  - 金剑
+  - 枪剑
 categories:
   - BG
   - 18X
@@ -14,9 +15,9 @@ categories:
 
 ## 阅前提示
 
-❗️接千年血战以后  
-❗️混邪人，可能会有不伦情节  
-❗️双洁需要特别注意，存在一对多床戏（可能） 
+>❗️我绿我自己情节，有
+>❗️试图倒反天罡，但感觉效果不是那么好  
+>❗️和《John Wick》的梦幻联动（就是为了拿碟醋包的这顿饺子）    
 
 ## 章节
 
