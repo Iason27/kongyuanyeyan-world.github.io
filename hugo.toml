@@ -39,13 +39,13 @@ enableGitInfo = true
 
 [[menu.main]]
   identifier = "categories"
-  name = "分类"
+  name = "📂 分类"
   pageRef = "categories"
   weight = 4
 
 [[menu.main]]
   identifier = "tags"
-  name = "标签"
+  name = "🏷️ 标签"
   pageRef = "tags"
   weight = 5
 
@@ -63,7 +63,7 @@ enableGitInfo = true
 
 [[menu.main]]
   identifier = "about"
-  name = "关于"
+  name = "🏮 关于"
   pageRef = "about"
   weight = 8
 
