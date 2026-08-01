@@ -1,4 +1,5 @@
 baseURL = "https://iason27.github.io/kongyuanyeyan-world.github.io/"
+timeZone = "Asia/Shanghai"
 languageCode = "zh-cn"
 title = "夜宴拾遗"
 theme = "PaperMod"

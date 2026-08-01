@@ -1,6 +1,6 @@
 {{ $sections := slice "novels" "short" "ideas" }}
 {{ $pages := where site.RegularPages "Section" "in" $sections }}
-{{ $sorted := $pages.ByLastmod.Reverse }}
+{{ $sorted := $pages.ByDate.Reverse }}
 {{ $recent := first 8 $sorted }}
 {{ if eq (len $recent) 0 }}
 <p>还没有内容，去写第一篇吧！</p>
