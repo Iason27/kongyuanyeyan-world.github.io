@@ -380,3 +380,86 @@
 .comments-title {
   margin-bottom: 0.9em;   /* “评论”标题与 giscus 评论框之间 */
 }
+
+/* ============================================================
+   归档：时间线 + 更新记录
+   ============================================================ */
+.timeline-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.tl-year {
+  font-size: 1.3em;
+  margin: 1.8em 0 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px dashed #d5d5d5;
+}
+.timeline {
+  position: relative;
+  margin: 0 0 1.5em;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--morandi-cat-border);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.tl-dot {
+  position: absolute;
+  left: -30px;
+  top: 0.45em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--morandi-cat-text);
+  border: 2px solid var(--theme);
+  box-shadow: 0 0 0 1px var(--morandi-cat-border);
+}
+.dot-novel { background: var(--morandi-tag-text); box-shadow: 0 0 0 1px var(--morandi-tag-border); }
+.dot-idea  { background: #b8a88f; box-shadow: 0 0 0 1px #d8cdb8; }
+.tl-date {
+  flex: none;
+  min-width: 3.2em;
+  font-size: 0.85em;
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+}
+.tl-body {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tl-kind {
+  flex: none;
+  font-size: 0.72em;
+  padding: 1px 8px;
+  border-radius: 999px;
+  line-height: 1.6;
+}
+.kind-novel { background: var(--morandi-tag-bg); color: var(--morandi-tag-text); border: 1px solid var(--morandi-tag-border); }
+.kind-short { background: var(--morandi-cat-bg); color: var(--morandi-cat-text); border: 1px solid var(--morandi-cat-border); }
+.kind-idea  { background: #efe8dc; color: #8a7a5c; border: 1px solid #ddd2ba; }
+.tl-work {
+  font-size: 0.9em;
+  color: var(--secondary);
+  text-decoration: none;
+}
+.tl-work:hover { color: var(--primary); }
+.tl-title {
+  font-size: 0.95em;
+  color: var(--primary);
+  text-decoration: none;
+}
+.tl-title:hover { text-decoration: underline; }

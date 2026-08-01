@@ -1,0 +1,39 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- /* 更新记录：长篇章节 + 短篇 + 脑洞，按发布时间倒序的时间线 */ -}}
+{{- $pages := where site.RegularPages "Type" "in" (slice "novels" "short" "ideas") }}
+{{- $pages = where $pages "Params.hidden" "ne" true }}
+{{- $pages = sort $pages "Date" "desc" }}
+{{- $byYear := $pages.GroupByDate "2006" "desc" }}
+
+<div class="timeline-wrap">
+  {{- range $byYear }}
+  <h2 class="tl-year">{{ .Key }}</h2>
+  <div class="timeline">
+    {{- range .Pages }}
+      {{- $kind := "short" }}
+      {{- if eq .Type "novels" }}{{ $kind = "novel" }}{{ else if eq .Type "ideas" }}{{ $kind = "idea" }}{{ end }}
+      <div class="timeline-item">
+        <span class="tl-dot dot-{{ $kind }}"></span>
+        <span class="tl-date">{{ .Date.Format "01-02" }}</span>
+        <div class="tl-body">
+          <span class="tl-kind kind-{{ $kind }}">
+            {{- if eq $kind "novel" }}章节{{ else if eq $kind "idea" }}脑洞{{ else }}短篇{{ end -}}
+          </span>
+          {{- if eq .Type "novels" }}
+          <a class="tl-work" href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+          {{- end }}
+          <a class="tl-title" href="{{ .Permalink }}">{{ .Title }}</a>
+        </div>
+      </div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+{{- end }}
