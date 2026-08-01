@@ -1,7 +1,7 @@
 ---
 title: "Hair"
 description: "副经理蓝染 × 经理平子"
-date: 2026-07-31
+date: 2026-08-01T01:01:42
 robotsNoIndex: true
 summary: "蓝染惣右介 × 平子真子"
 tags:

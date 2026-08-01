@@ -1,7 +1,7 @@
 ---
 title: "Farewell"
 description: "吉尔伽美什(A闪) × 阿尔托莉娅(蓝呆)"
-date: 2026-07-31
+date: 2026-08-01T01:01:42
 robotsNoIndex: true
 summary: "吉尔伽美什 × 阿尔托莉娅"
 tags:
