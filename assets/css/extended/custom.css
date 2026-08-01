@@ -430,8 +430,8 @@
 .dot-idea  { background: #b8a88f; box-shadow: 0 0 0 1px #d8cdb8; }
 .tl-date {
   flex: none;
-  min-width: 3.2em;
-  font-size: 0.85em;
+  min-width: 6.5em;
+  font-size: 0.82em;
   color: var(--secondary);
   font-variant-numeric: tabular-nums;
 }

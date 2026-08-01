@@ -22,7 +22,7 @@
       {{- if eq .Type "novels" }}{{ $kind = "novel" }}{{ else if eq .Type "ideas" }}{{ $kind = "idea" }}{{ end }}
       <div class="timeline-item">
         <span class="tl-dot dot-{{ $kind }}"></span>
-        <span class="tl-date">{{ .Date.Format "01-02" }}</span>
+        <span class="tl-date">{{ .Date.Format "2006-01-02 15:04" }}</span>
         <div class="tl-body">
           <span class="tl-kind kind-{{ $kind }}">
             {{- if eq $kind "novel" }}章节{{ else if eq $kind "idea" }}脑洞{{ else }}短篇{{ end -}}
