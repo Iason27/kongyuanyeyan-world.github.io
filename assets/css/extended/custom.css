@@ -372,3 +372,11 @@
   background: var(--morandi-cat-text);
   color: #fff !important;
 }
+
+/* --- 评论区与上方 tag/category 标签拉开间距 --- */
+.comments {
+  margin-top: 2.5em;      /* 评论标题与上方标签留出一行以上空白 */
+}
+.comments-title {
+  margin-bottom: 0.9em;   /* “评论”标题与 giscus 评论框之间 */
+}
