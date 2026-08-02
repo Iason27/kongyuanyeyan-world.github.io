@@ -463,3 +463,18 @@
   text-decoration: none;
 }
 .tl-title:hover { text-decoration: underline; }
+
+/* ============================================================
+   首页最近更新：长篇作品名（斜体 + 深灰色）
+   ============================================================ */
+.recent-item .novel-title {
+  font-style: italic;
+  color: #4a4a4a;
+  font-weight: 600;
+}
+.recent-item a {
+  color: var(--primary);
+}
+.recent-item a:hover .novel-title {
+  color: var(--primary);
+}
