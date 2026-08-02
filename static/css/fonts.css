@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-104.woff2') format('woff2');
+  src: url('../fonts/zmx-104.woff2') format('woff2');
   unicode-range: U+64FD;
 }
 @font-face {
@@ -15,7 +15,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-107.woff2') format('woff2');
+  src: url('../fonts/zmx-107.woff2') format('woff2');
   unicode-range: U+62FE;
 }
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-108.woff2') format('woff2');
+  src: url('../fonts/zmx-108.woff2') format('woff2');
   unicode-range: U+9601;
 }
 @font-face {
@@ -31,7 +31,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-109.woff2') format('woff2');
+  src: url('../fonts/zmx-109.woff2') format('woff2');
   unicode-range: U+5BB4;
 }
 @font-face {
@@ -39,7 +39,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-113.woff2') format('woff2');
+  src: url('../fonts/zmx-113.woff2') format('woff2');
   unicode-range: U+9057;
 }
 @font-face {
@@ -47,7 +47,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-114.woff2') format('woff2');
+  src: url('../fonts/zmx-114.woff2') format('woff2');
   unicode-range: U+591C, U+665A, U+5F52;
 }
 @font-face {
@@ -55,7 +55,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-115.woff2') format('woff2');
+  src: url('../fonts/zmx-115.woff2') format('woff2');
   unicode-range: U+534A;
 }
 @font-face {
@@ -63,6 +63,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/zmx-117.woff2') format('woff2');
+  src: url('../fonts/zmx-117.woff2') format('woff2');
   unicode-range: U+98CE, U+82B1, U+4ECE, U+5BB9;
 }
