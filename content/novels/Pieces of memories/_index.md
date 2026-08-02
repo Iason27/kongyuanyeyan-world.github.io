@@ -4,7 +4,7 @@ robotsNoIndex: true
 status: "已完结"
 cp: "塞巴斯蒂安 x 夏尔"
 hideSummary: true
-paginate: 99
+paginate: 20
 tags:
   - 黑执事
   - 塞夏

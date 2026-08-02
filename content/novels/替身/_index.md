@@ -4,7 +4,7 @@ robotsNoIndex: true
 status: "连载中"
 cp: "蓝染惣右介 × 平子真子"
 hideSummary: true
-paginate: 99
+paginate: 20
 tags:
   - bleach
   - 蓝平

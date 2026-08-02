@@ -4,7 +4,7 @@ robotsNoIndex: true
 status: "连载中"
 cp: "葛力姆乔 x 井上织姬"
 hideSummary: true
-paginate: 99
+paginate: 20
 tags:
   - bleach
   - 葛织

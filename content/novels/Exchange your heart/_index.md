@@ -4,7 +4,7 @@ robotsNoIndex: true
 status: "已完结"
 cp: "阿尔托莉雅(黑枪呆) x 吉尔伽美什(A闪)"
 hideSummary: true
-paginate: 99
+paginate: 20
 tags:
   - fate
   - 金剑
