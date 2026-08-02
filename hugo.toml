@@ -81,8 +81,3 @@ enableGitInfo = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-# 首页 hero 区:大标题 + 副标题
-[params.homeInfoParams]
-  Title = "夜宴拾遗"
-  Content = "风晚宴归阁，揽花半从容"

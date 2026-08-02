@@ -478,34 +478,3 @@
 .recent-item a:hover .novel-title {
   color: var(--primary);
 }
-
-/* ============================================================
-   首页 Hero：站名（志莽行书，连笔书法）+ 副标题
-   字体自托管 static/fonts/zmx-*.woff2（钟齐志莽行书，Google Fonts 开源）
-/* hero 区样式 */
-.home-info .entry-header h1 {
-  font-family: 'Zhi Mang Xing', 'Kaiti SC', 'STKaiti', serif;
-  font-size: 3.2em;
-  letter-spacing: 12px;
-  font-weight: 400;
-  color: #3a3a3a;
-  margin-bottom: 8px;
-}
-.home-info .entry-content {
-  font-family: 'Zhi Mang Xing', 'Kaiti SC', 'STKaiti', serif;
-  font-size: 1.25em;
-  letter-spacing: 6px;
-  color: #6a6a6a;
-}
-/* 日间模式 hero 背景微调 */
-.home-info {
-  background: transparent !important;
-  padding-top: 20px;
-}
-/* 夜间模式适配 */
-[data-theme=dark] .home-info .entry-header h1 {
-  color: #d8d0c8;
-}
-[data-theme=dark] .home-info .entry-content {
-  color: #9a928a;
-}
