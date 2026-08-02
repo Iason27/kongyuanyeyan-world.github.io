@@ -6,15 +6,15 @@
   {{- end }}
 </header>
 
-{{- /* 更新记录：长篇章节 + 短篇 + 脑洞，按发布时间倒序的时间线 */ -}}
+{{- /* 更新记录：长篇章节 + 短篇 + 脑洞，按发布时间倒序的时间线，每页 20 条 */ -}}
 {{- $pages := where site.RegularPages "Type" "in" (slice "novels" "short" "ideas") }}
 {{- $pages = where $pages "Params.hidden" "ne" true }}
 {{- $pages = where $pages "Date.Year" "gt" 1999 }}  {{/* 过滤无 date 的零值页面（0001），避免出现 0001 年组 */}}
 {{- $pages = sort $pages "Date" "desc" }}
-{{- $byYear := $pages.GroupByDate "2006" "desc" }}
+{{- $paginator := .Paginate $pages 20 }}
 
 <div class="timeline-wrap">
-  {{- range $byYear }}
+  {{- range $paginator.Pages.GroupByDate "2006" "desc" }}
   <h2 class="tl-year">{{ .Key }}</h2>
   <div class="timeline">
     {{- range .Pages }}
@@ -37,4 +37,18 @@
   </div>
   {{- end }}
 </div>
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL }}">« 上一页</a>
+    {{- end }}
+    <span class="page-number">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL }}">下一页 »</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
 {{- end }}
