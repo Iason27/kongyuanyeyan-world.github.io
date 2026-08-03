@@ -68,6 +68,12 @@ enableGitInfo = true
   pageRef = "about"
   weight = 8
 
+[[menu.main]]
+  identifier = "support"
+  name = "🧋 资助"
+  pageRef = "support"
+  weight = 9
+
 [params.assets]
   favicon = "/favicon.svg"
   favicon16x16 = "/favicon.svg"
