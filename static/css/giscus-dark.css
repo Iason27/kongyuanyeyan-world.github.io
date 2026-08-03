@@ -1,4 +1,6 @@
 /* giscus 评论框深色主题：匹配 PaperMod dark（--theme: rgb(29,30,32)）+ 莫兰迪点缀 */
+/* 字体：与博客正文一致（Lora + 思源宋体，自托管） */
+@import url('fonts.css');
 main {
   --color-canvas-default: #1d1e20;
   --color-canvas-subtle: #2e2e33;
@@ -64,4 +66,14 @@ main {
   --color-primer-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   --color-primer-shadow-focus: 0 0 0 3px rgba(181, 138, 144, 0.3);
   --color-focus-ring: rgba(181, 138, 144, 0.35);
+}
+
+/* 评论字体与博客正文一致：英文 Lora + 中文 思源宋体 */
+main, body {
+  font-family: 'Lora', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+}
+
+/* 输入框也跟随 */
+textarea, input, .gsc-comment-box textarea {
+  font-family: 'Lora', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
 }
