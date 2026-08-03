@@ -379,6 +379,13 @@
 }
 .comments-title {
   margin-bottom: 0.9em;   /* “评论”标题与 giscus 评论框之间 */
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+.comments-icon {
+  flex-shrink: 0;
+  color: var(--secondary, #9a6a72);
 }
 
 /* ============================================================
