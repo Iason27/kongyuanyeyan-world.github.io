@@ -4,14 +4,15 @@
     {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
-{{/* 状态徽章：front matter 里写 status: "连载中"/"完结"/"待填坑" */}}
-{{- with .Params.status -}}
+{{/* 状态徽章:front matter 里写 status: "连载中"/"已完结"/"待填坑"
+   仅显示在长篇作品处(列表条目/目录页,Kind=section),章节页不显示 */}}
+{{- if and .Params.status (eq .Kind "section") -}}
     {{- $statusClass := "unknown" -}}
-    {{- if eq . "连载中" }}{{ $statusClass = "ongoing" }}
-    {{- else if or (eq . "完结") (eq . "已完结") }}{{ $statusClass = "finished" }}
-    {{- else if eq . "待填坑" }}{{ $statusClass = "hiatus" }}
+    {{- if eq .Params.status "连载中" }}{{ $statusClass = "ongoing" }}
+    {{- else if or (eq .Params.status "完结") (eq .Params.status "已完结") }}{{ $statusClass = "finished" }}
+    {{- else if eq .Params.status "待填坑" }}{{ $statusClass = "hiatus" }}
     {{- end -}}
-    {{- $scratch.Add "meta" (slice (printf "<span class=\"status-badge %s\">%s</span>" $statusClass .)) }}
+    {{- $scratch.Add "meta" (slice (printf "<span class=\"status-badge %s\">%s</span>" $statusClass .Params.status)) }}
 {{- end -}}
 
 {{- if (.Param "ShowReadingTime") -}}
