@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Waline 评论区(服务端地址)
   [params.waline]
-    serverURL = "https://kongyuanyeyan-comment.vercel.app"
+    serverURL = "https://kongyuanyeyan.duckdns.org"
   customHeadHTML = '<meta name="robots" content="noindex">'
 
 [[menu.main]]
