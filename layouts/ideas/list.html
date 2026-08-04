@@ -19,10 +19,13 @@
   {{- range $pages }}
   <li class="compact-item">
     <a class="compact-title" href="{{ .Permalink }}">{{ .Title }}</a>
+    <button class="idea-like" data-url="/{{ .Section }}/{{ .File.BaseFileName }}/" title="支持这个脑洞"><span class="like-icon">👍</span><span class="like-count">0</span></button>
     <span class="compact-summary">{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</span>
   </li>
   {{- end }}
 </ul>
+<script>window.IDEAS_LIKE_SERVER = "{{ .Site.Params.waline.serverURL }}";</script>
+<script src="{{ .Site.BaseURL }}js/ideas-like.js"></script>
 {{- else }}
 <div class="post-content md-content"><p>暂无脑洞，敬请期待～</p></div>
 {{- end }}

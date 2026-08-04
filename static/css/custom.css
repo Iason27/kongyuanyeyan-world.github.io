@@ -28,3 +28,40 @@ html[data-theme="dark"] .compact-title {
 html[data-theme="dark"] .compact-title:hover {
   color: #c2d5b4;
 }
+
+/* 脑洞点赞按钮 */
+.idea-like {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 1px 10px;
+  font-size: 0.85em;
+  border: 1px solid;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+html[data-theme="light"] .idea-like {
+  color: #7d8f6e;
+  border-color: #c4cfba;
+}
+html[data-theme="light"] .idea-like:hover {
+  background: #f0f4ec;
+}
+html[data-theme="dark"] .idea-like {
+  color: #a9bf9b;
+  border-color: #4a5a42;
+}
+html[data-theme="dark"] .idea-like:hover {
+  background: #2a3326;
+}
+.idea-like .like-count {
+  font-variant-numeric: tabular-nums;
+}
+.idea-like.liked {
+  opacity: 0.55;
+  cursor: default;
+}
