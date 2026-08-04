@@ -16,6 +16,11 @@
     catch (e) { return encodeURIComponent(raw); }
   }
 
+  // 取回原始未编码路径(用于 POST body,服务端原样存储)
+  function rawUrl(raw) {
+    try { return decodeURIComponent(raw); } catch (e) { return raw; }
+  }
+
   // 逐个读取当前计数
   btns.forEach(function (btn) {
     var url = btn.dataset.url;
@@ -36,7 +41,12 @@
       e.preventDefault();
       if (btn.classList.contains('liked')) return;
       var url = btn.dataset.url;
-      fetch(SERVER + '/api/article?path=' + normUrl(url), { method: 'POST' })
+      // 实测:POST 的 path 必须放 JSON body(服务端才接收),query 方式不生效
+      fetch(SERVER + '/api/article', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: rawUrl(url) })
+      })
         .then(function (r) { return r.json(); })
         .then(function () {
           var c = btn.querySelector('.like-count');
