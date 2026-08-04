@@ -1,10 +1,3 @@
-{{- if not .Params.disableLike -}}
-<div class="post-like-wrap">
-  <button class="like-btn" data-url="{{ .File.Path }}" title="喜欢这篇就点个赞">
-    <span class="like-icon">👍</span><span class="like-count">0</span>
-  </button>
-</div>
-{{- end -}}
 {{- if .Params.categories -}}
 <div class="post-cats">
   {{- range (.GetTerms "categories") }}
