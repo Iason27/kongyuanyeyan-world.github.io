@@ -48,6 +48,11 @@
   {{- end }}
 
   <footer class="post-footer">
+    <div class="post-like-wrap">
+      <button class="like-btn" data-url="{{ .File.Path }}" title="喜欢这篇就点个赞">
+        <span class="like-icon">👍</span><span class="like-count">0</span>
+      </button>
+    </div>
     {{- partial "extend_post_content.html" . }}
 
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
@@ -56,11 +61,6 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    <div class="post-like-wrap">
-      <button class="like-btn" data-url="{{ .File.Path }}" title="喜欢这篇就点个赞">
-        <span class="like-icon">👍</span><span class="like-count">0</span>
-      </button>
-    </div>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
