@@ -15,5 +15,6 @@ description: "这里廿七，鬼畜咸鱼文手，不入流小卡拉米画手，
 - 写作：Markdown
 - 构建：Hugo + PaperMod
 - 部署：GitHub
+- 全站字数：约 {{< wordcount >}} 字
 
 <br>

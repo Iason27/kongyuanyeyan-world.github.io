@@ -1,0 +1,9 @@
+{{- /* 全站总字数统计(中文按字符计);排除当前页面避免 Hugo 渲染循环 */ -}}
+{{- $total := 0 -}}
+{{- $self := $.Page.File.Path -}}
+{{- range site.RegularPages -}}
+  {{- if ne .File.Path $self -}}
+    {{- $total = add $total .WordCount -}}
+  {{- end -}}
+{{- end -}}
+{{- $total -}}

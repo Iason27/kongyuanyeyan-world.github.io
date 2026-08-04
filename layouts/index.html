@@ -1,0 +1,29 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>夜宴拾遗</h1>
+  {{- with site.Params.description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- /* 最近更新：按最后修改时间(git 提交)倒序取 8 条 */}}
+{{- $recent := where site.RegularPages.ByLastmod.Reverse "Params.hiddenInHomeList" "!=" "true" | first 8 }}
+{{- if gt (len $recent) 0 }}
+<div class="recent-updates">
+  <h2 class="recent-heading">📌 最近更新</h2>
+  <ul class="recent-list">
+    {{- range $recent }}
+    <li class="recent-item">
+      <a class="recent-title" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- with .CurrentSection }}
+        {{- if and .Title (ne .Title site.Title) }}
+        <span class="recent-sec">《{{ .Title }}》</span>
+        {{- end }}
+      {{- end }}
+      <time class="recent-date" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{- end }}
+{{- end }}

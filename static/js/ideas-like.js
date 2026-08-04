@@ -3,7 +3,7 @@
    每浏览器仅能赞一次(localStorage 记录)。 */
 (function () {
   var SERVER = window.IDEAS_LIKE_SERVER;
-  var btns = document.querySelectorAll('.idea-like');
+  var btns = document.querySelectorAll('.idea-like, .like-btn');
   if (!SERVER || !btns.length) return;
 
   var LS_KEY = 'idea-liked-v1';

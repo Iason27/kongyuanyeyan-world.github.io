@@ -16,6 +16,11 @@
     login: "disable",
     requiredFields: ["nick"],
     meta: ["nick", "mail", "link"],
+    // 表情:自托管 bilibili + weibo 两套,国内加载稳
+    emoji: [
+      "{{ .Site.BaseURL }}emojis/bilibili",
+      "{{ .Site.BaseURL }}emojis/weibo"
+    ],
     // 头像走国内 Gravatar 镜像(cravatar),防止挂图
     avatar: "mp",
     avatarCDN: "https://cravatar.cn/avatar/",

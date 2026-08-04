@@ -29,8 +29,9 @@ html[data-theme="dark"] .compact-title:hover {
   color: #c2d5b4;
 }
 
-/* 脑洞点赞按钮 */
-.idea-like {
+/* 脑洞/文章点赞按钮 */
+.idea-like,
+.like-btn {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -44,24 +45,86 @@ html[data-theme="dark"] .compact-title:hover {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-html[data-theme="light"] .idea-like {
+html[data-theme="light"] .idea-like,
+html[data-theme="light"] .like-btn {
   color: #7d8f6e;
   border-color: #c4cfba;
 }
-html[data-theme="light"] .idea-like:hover {
+html[data-theme="light"] .idea-like:hover,
+html[data-theme="light"] .like-btn:hover {
   background: #f0f4ec;
 }
-html[data-theme="dark"] .idea-like {
+html[data-theme="dark"] .idea-like,
+html[data-theme="dark"] .like-btn {
   color: #a9bf9b;
   border-color: #4a5a42;
 }
-html[data-theme="dark"] .idea-like:hover {
+html[data-theme="dark"] .idea-like:hover,
+html[data-theme="dark"] .like-btn:hover {
   background: #2a3326;
 }
-.idea-like .like-count {
+.idea-like .like-count,
+.like-btn .like-count {
   font-variant-numeric: tabular-nums;
 }
-.idea-like.liked {
+.idea-like.liked,
+.like-btn.liked {
   opacity: 0.55;
   cursor: default;
+}
+
+/* 文章页点赞区 */
+.post-like-wrap {
+  margin: 1.2em 0 0.4em;
+}
+.post-like-wrap .like-btn {
+  margin-left: 0;
+  padding: 4px 14px;
+  font-size: 0.95em;
+}
+
+/* 首页最近更新 */
+.recent-updates {
+  margin: 1.5em 0 2em;
+}
+.recent-heading {
+  font-size: 1.2em;
+  margin-bottom: 0.6em;
+}
+.recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.recent-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 0.55em 0;
+  border-bottom: 1px dashed;
+}
+html[data-theme="light"] .recent-item {
+  border-color: #d8ded2;
+}
+html[data-theme="dark"] .recent-item {
+  border-color: #3a4336;
+}
+.recent-title {
+  font-weight: 600;
+}
+html[data-theme="light"] .recent-title {
+  color: #5f7152;
+}
+html[data-theme="dark"] .recent-title {
+  color: #b5c9a8;
+}
+.recent-sec {
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+.recent-date {
+  margin-left: auto;
+  font-size: 0.8em;
+  opacity: 0.6;
+  flex-shrink: 0;
 }

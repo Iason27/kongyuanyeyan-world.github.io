@@ -5,3 +5,10 @@
 {{/* GoatCounter 浏览量统计 — 自托管 count.js（gc.zgo.at 在国内被墙，改走本站 static/js/count.js） */}}
 <script data-goatcounter="https://iason27.goatcounter.com/count"
         async src="{{ .Site.BaseURL }}js/count.js"></script>
+
+{{/* 点赞(脑洞页/文章页通用):借用 Waline article 计数接口 */}}
+<script>window.IDEAS_LIKE_SERVER = "{{ .Site.Params.waline.serverURL }}";</script>
+<script src="{{ .Site.BaseURL }}js/ideas-like.js"></script>
+
+{{/* 阅读进度记忆(仅文章页自动启用) */}}
+<script src="{{ .Site.BaseURL }}js/reading-progress.js"></script>
