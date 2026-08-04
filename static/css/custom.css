@@ -73,14 +73,15 @@ html[data-theme="dark"] .like-btn:hover {
   cursor: default;
 }
 
-/* 文章页点赞区(正文结束后,默认左对齐) */
+/* 文章页点赞区(评论区上方居中,与上下留白舒适) */
 .post-like-wrap {
-  margin: 1.2em 0 0.2em;
+  text-align: center;
+  margin: 2.6em 0 2.8em;
 }
 .post-like-wrap .like-btn {
   margin-left: 0;
-  padding: 4px 14px;
-  font-size: 0.9em;
+  padding: 5px 18px;
+  font-size: 0.95em;
 }
 
 /* 首页最近更新 */
