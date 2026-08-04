@@ -18,6 +18,10 @@ enableGitInfo = true
   ShowPostNavLinks = true
   mainSections = []
   comments = true
+
+  # Waline 评论区(服务端地址)
+  [params.waline]
+    serverURL = "https://kongyuanyeyan-comment.vercel.app"
   customHeadHTML = '<meta name="robots" content="noindex">'
 
 [[menu.main]]
