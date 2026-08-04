@@ -1,0 +1,5 @@
+{{- /* 字数统计:汉字 + 标点符号(不含空白);return 返回 int */ -}}
+{{- $plain := .Plain -}}
+{{- $han := len (findRE `[\x{4E00}-\x{9FFF}\x{3400}-\x{4DBF}\x{F900}-\x{FAFF}]` $plain) -}}
+{{- $punct := len (findRE `[，。！？；：、（）《》【】「」『』“”‘’—…·,\.!?;:()\[\]{}'\"<>/\\|]` $plain) -}}
+{{- return (add $han $punct) -}}
