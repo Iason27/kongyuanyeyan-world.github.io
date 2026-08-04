@@ -1,7 +1,7 @@
 {{- $src := .Get "src" | default "" -}}
 {{- $src = strings.TrimPrefix "/" $src -}}
 <figure>
-  <img loading="lazy" src="{{ $src | absURL }}" alt="{{ .Get "alt" | default "" }}"{{ with .Get "width" }} width="{{ . }}"{{ end }}>
+  <img loading="lazy" src="{{ $src | absURL }}" alt="{{ .Get "alt" | default "" }}"{{ with .Get "width" }} width="{{ . }}"{{ end }}{{ with .Get "class" }} class="{{ . }}"{{ end }}>
   {{- with .Get "title" }}
   <figcaption>{{ . }}</figcaption>
   {{- end }}

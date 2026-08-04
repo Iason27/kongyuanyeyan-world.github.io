@@ -1,0 +1,7 @@
+/* 站点自定义样式 */
+
+/* 暗色模式下,带 .qr-invert 的图片(如支付宝二维码)自动反色,
+   避免白底大亮块刺眼。反色后的二维码仍可正常扫码。 */
+html[data-theme="dark"] img.qr-invert {
+  filter: invert(1) hue-rotate(180deg);
+}

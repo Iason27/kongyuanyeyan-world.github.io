@@ -14,7 +14,7 @@ robotsNoIndex: true
 
 >如有点文也可联系我，目前打算30元/千字，也不是太懂行情；如有点文请备注说明，谢谢～
 
-{{< img src="/images/alipay-qr.png" alt="支付宝收款码" title="支付宝扫码投喂🍚" width="240" >}}
+{{< img src="/images/alipay-qr.png" alt="支付宝收款码" title="支付宝扫码投喂🍚" width="240" class="qr-invert" >}}
 
 ---
 
