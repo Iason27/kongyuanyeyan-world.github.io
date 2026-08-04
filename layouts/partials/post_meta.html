@@ -8,7 +8,7 @@
 {{- with .Params.status -}}
     {{- $statusClass := "unknown" -}}
     {{- if eq . "连载中" }}{{ $statusClass = "ongoing" }}
-    {{- else if eq . "完结" }}{{ $statusClass = "finished" }}
+    {{- else if or (eq . "完结") (eq . "已完结") }}{{ $statusClass = "finished" }}
     {{- else if eq . "待填坑" }}{{ $statusClass = "hiatus" }}
     {{- end -}}
     {{- $scratch.Add "meta" (slice (printf "<span class=\"status-badge %s\">%s</span>" $statusClass .)) }}
