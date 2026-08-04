@@ -15,9 +15,13 @@
     {{- range $recent }}
     <li class="recent-item">
       <a class="recent-title" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- $secLabel := "" -}}
+      {{- if eq .Section "novels" }}{{ $secLabel = "长篇" }}{{ else if eq .Section "short" }}{{ $secLabel = "短篇" }}{{ else if eq .Section "ideas" }}{{ $secLabel = "脑洞" }}{{ end -}}
+      {{- if $secLabel }}<span class="recent-tag tag-{{ .Section }}">{{ $secLabel }}</span>{{ end -}}
+      {{- $sec := .Section -}}
       {{- with .CurrentSection }}
-        {{- if and .Title (ne .Title site.Title) }}
-        <span class="recent-sec">《{{ .Title }}》</span>
+        {{- if and .Title (ne .Title site.Title) (eq $sec "novels") }}
+        <span class="recent-sec">{{ .Title }}</span>
         {{- end }}
       {{- end }}
       <time class="recent-date" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>

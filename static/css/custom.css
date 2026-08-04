@@ -121,7 +121,23 @@ html[data-theme="dark"] .recent-title {
 .recent-sec {
   font-size: 0.85em;
   opacity: 0.75;
+  font-style: italic;
 }
+.recent-tag {
+  font-size: 0.72em;
+  padding: 1px 9px;
+  border-radius: 999px;
+  border: 1px solid;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+/* 分类标签配色:长篇绿/短篇蓝/脑洞紫(莫兰迪,明暗自适配) */
+html[data-theme="light"] .recent-tag.tag-novels { color: #6e8262; border-color: #c4cfba; background: #f2f6ee; }
+html[data-theme="light"] .recent-tag.tag-short  { color: #6d8299; border-color: #bcc9d6; background: #f0f4f8; }
+html[data-theme="light"] .recent-tag.tag-ideas  { color: #847a8f; border-color: #ccc3d3; background: #f6f3f8; }
+html[data-theme="dark"] .recent-tag.tag-novels { color: #a8bc9b; border-color: #4a5a42; background: #24301f; }
+html[data-theme="dark"] .recent-tag.tag-short  { color: #a3b8cc; border-color: #3d4d5e; background: #1f2730; }
+html[data-theme="dark"] .recent-tag.tag-ideas  { color: #b6a9c2; border-color: #4d4257; background: #2a2430; }
 .recent-date {
   margin-left: auto;
   font-size: 0.8em;
