@@ -5,3 +5,26 @@
 html[data-theme="dark"] img.qr-invert {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* 脑洞记录:标题粗体+斜体,莫兰迪配色(亮/暗背景各自适配) */
+.compact-title {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* 亮色背景:深莫兰迪绿,保证对比度 */
+html[data-theme="light"] .compact-title {
+  color: #7d8f6e;
+}
+html[data-theme="light"] .compact-title:hover {
+  color: #5f7152;
+}
+
+/* 暗色背景:浅莫兰迪绿,提亮保证可读 */
+html[data-theme="dark"] .compact-title {
+  color: #a9bf9b;
+}
+html[data-theme="dark"] .compact-title:hover {
+  color: #c2d5b4;
+}
