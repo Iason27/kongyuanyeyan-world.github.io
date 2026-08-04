@@ -20,9 +20,9 @@ enableGitInfo = true
   mainSections = []
   comments = true
 
-  # Waline 评论区(服务端地址)
+  # Waline 评论区(服务端地址,www 直达避免 308 跳转)
   [params.waline]
-    serverURL = "https://kongyuanyeyan.duckdns.org"
+    serverURL = "https://www.kongyuanyeyan.duckdns.org"
   customHeadHTML = '<meta name="robots" content="noindex">'
 
 [[menu.main]]
